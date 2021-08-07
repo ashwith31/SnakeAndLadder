@@ -12,7 +12,7 @@ public class SnakeAndLadder {
 		System.out.println("Welcome to Snake and Ladder Problem");
 		System.out.println("The Game is played by a single player");
 
-		while(start<=WINNING_POSITION)
+		while(start<WINNING_POSITION)
 		{
 			int dice=(int)Math.floor((Math.random()*10 %6 ))+1;         //dice is rolled using random method
 			System.out.println("The value of dice is "+dice);
@@ -26,6 +26,10 @@ public class SnakeAndLadder {
 				case LADDER:
 					System.out.println("You got a LADDER");
 					start +=dice;
+					if(start>WINNING_POSITION)
+					{
+						start -=dice;
+					}
 					System.out.println("Your position is "+start);
 					break;
 				case SNAKE:
