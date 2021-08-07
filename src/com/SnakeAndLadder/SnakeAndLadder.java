@@ -31,9 +31,7 @@ public class SnakeAndLadder {
 					System.out.println("Your position is "+start);
 					break;
 				default:
-					break;
-		
+					break;	
 	}
 	}
-
 }
