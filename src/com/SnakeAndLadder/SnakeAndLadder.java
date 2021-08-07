@@ -12,7 +12,7 @@ public class SnakeAndLadder {
 													
 		System.out.println("Welcome to Snake and Ladder Problem");
 
-		Scanner sc=new Scanner(System.in);
+		Scanner sc=new Scanner(System.in);                              //Taking the names of users using Scanner Class
 		System.out.println("Enter the name of first player");
 		String playerOneName=sc.next();
 		int playerOneCount=func();
@@ -21,14 +21,17 @@ public class SnakeAndLadder {
 		String playerTwoName=sc.next();
 		int playerTwoCount=func();
 		System.out.println("Number of times "+playerTwoName+" rolled the dice= "+playerTwoCount);
-
 		if(playerOneCount<playerTwoCount)
 		{
 			System.out.println(playerOneName+ " wins the game");
 		}
-		else
+		else if(playerOneCount>playerTwoCount)
 		{
 			System.out.println(playerTwoName+ " wins the game");
+		}
+		else
+		{
+			System.out.println("Its a draw");
 		}
 		
 		
@@ -83,6 +86,6 @@ public class SnakeAndLadder {
 	}
 		count++;
 		}
-		return count;
+		return count;                                                          //count is returned
 	}
 }
